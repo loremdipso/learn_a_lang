@@ -1241,7 +1241,7 @@ var app = (function () {
     	let icon;
     	let t0;
     	let span;
-    	let t1_value = /*word*/ ctx[0].key + "";
+    	let t1_value = /*word*/ ctx[0].value + "";
     	let t1;
     	let current;
     	let mounted;
@@ -1293,7 +1293,7 @@ var app = (function () {
     			}
 
     			icon.$set(icon_changes);
-    			if ((!current || dirty & /*word*/ 1) && t1_value !== (t1_value = /*word*/ ctx[0].key + "")) set_data_dev(t1, t1_value);
+    			if ((!current || dirty & /*word*/ 1) && t1_value !== (t1_value = /*word*/ ctx[0].value + "")) set_data_dev(t1, t1_value);
     		},
     		i: function intro(local) {
     			if (current) return;
@@ -1336,9 +1336,9 @@ var app = (function () {
     			t = text("still curious?");
     			attr_dev(a, "target", "_blank");
     			attr_dev(a, "href", /*link*/ ctx[1]);
-    			add_location(a, file$1, 33, 4, 870);
+    			add_location(a, file$1, 33, 4, 878);
     			attr_dev(div, "class", "text-right");
-    			add_location(div, file$1, 32, 3, 841);
+    			add_location(div, file$1, 32, 3, 849);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -1371,7 +1371,7 @@ var app = (function () {
     	let div2;
     	let div1;
     	let div0;
-    	let t0_value = /*word*/ ctx[0].value + "";
+    	let t0_value = /*word*/ ctx[0].translation + "";
     	let t0;
     	let t1;
     	let if_block = /*link*/ ctx[1] && create_if_block(ctx);
@@ -1386,12 +1386,12 @@ var app = (function () {
     			if (if_block) if_block.c();
     			attr_dev(div0, "class", "p-5 opacity-0 hover:opacity-100 word svelte-1yyd3qf");
     			toggle_class(div0, "always-show", /*isTouch*/ ctx[3]);
-    			add_location(div0, file$1, 23, 3, 697);
+    			add_location(div0, file$1, 23, 3, 699);
     			attr_dev(div1, "class", "bg-black my-2 text-center cursor-pointer");
-    			add_location(div1, file$1, 22, 2, 639);
+    			add_location(div1, file$1, 22, 2, 641);
     			attr_dev(div2, "slot", "body");
     			attr_dev(div2, "class", "p-5 pb-0 pt-3 text-gray-700 body-2");
-    			add_location(div2, file$1, 21, 1, 576);
+    			add_location(div2, file$1, 21, 1, 578);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -1402,7 +1402,7 @@ var app = (function () {
     			if (if_block) if_block.m(div2, null);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*word*/ 1 && t0_value !== (t0_value = /*word*/ ctx[0].value + "")) set_data_dev(t0, t0_value);
+    			if (dirty & /*word*/ 1 && t0_value !== (t0_value = /*word*/ ctx[0].translation + "")) set_data_dev(t0, t0_value);
 
     			if (/*link*/ ctx[1]) {
     				if (if_block) {
@@ -1580,7 +1580,7 @@ var app = (function () {
     	}
     }
 
-    var DataJSON = [{name:"spanish",words:[{key:"hola",value:"hello"},{key:"b",value:"b"}]}];
+    var DataJSON = [{name:"spanish",words:[{value:"persona",translation:"person",part_of_speech:"cognates"},{value:"familia",translation:"family",part_of_speech:"cognates"},{value:"aeropuerto",translation:"airport",part_of_speech:"cognates"},{value:"tren",translation:"train",part_of_speech:"cognates"},{value:"restaurant",translation:"restaurant",part_of_speech:"cognates"},{value:"universidad",translation:"university",part_of_speech:"cognates"},{value:"visitar",translation:"to visit",part_of_speech:"cognates"},{value:"necesario",translation:"necessary",part_of_speech:"cognates"},{value:"público",translation:"public",part_of_speech:"cognates"},{value:"minuto",translation:"minute",part_of_speech:"cognates"},{value:"acción",translation:"action",part_of_speech:"cognates"},{value:"nación",translation:"nation",part_of_speech:"cognates"},{value:"ficción",translation:"fiction",part_of_speech:"cognates"},{value:"¿Cómo?",translation:"How?",part_of_speech:"interrogatives"},{value:"¿Cuál?",translation:"Which?",part_of_speech:"interrogatives"},{value:"¿Cuándo?",translation:"When?",part_of_speech:"interrogatives"},{value:"¿Dónde?",translation:"Where?",part_of_speech:"interrogatives"},{value:"¿Por qué?",translation:"Why?",part_of_speech:"interrogatives"},{value:"¿Qué?",translation:"What?",part_of_speech:"interrogatives"},{value:"¿Quién?",translation:"Who?",part_of_speech:"interrogatives"},{value:"la casa",translation:"the house",part_of_speech:"nouns"},{value:"la mesa",translation:"the table",part_of_speech:"nouns"},{value:"la ventana",translation:"the window",part_of_speech:"nouns"},{value:"la silla",translation:"the chair",part_of_speech:"nouns"},{value:"la puerta",translation:"the door",part_of_speech:"nouns"},{value:"el reloj",translation:"the clock",part_of_speech:"nouns"},{value:"el piso",translation:"the floor",part_of_speech:"nouns"},{value:"la mujer",translation:"the woman",part_of_speech:"nouns"},{value:"el hombre",translation:"the man",part_of_speech:"nouns"},{value:"la niña",translation:"the girl",part_of_speech:"nouns"},{value:"el niño",translation:"the boy",part_of_speech:"nouns"},{value:"el gato (m)",translation:"the cat",part_of_speech:"nouns"},{value:"la gata (f)",translation:"the cat",part_of_speech:"nouns"},{value:"el perro (m)",translation:"the dog",part_of_speech:"nouns"},{value:"la perra (f)",translation:"the dog",part_of_speech:"nouns"},{value:"el pájaro",translation:"the bird",part_of_speech:"nouns"},{value:"el elefante",translation:"the elephant",part_of_speech:"nouns"},{value:"el coche",translation:"the car",part_of_speech:"nouns"},{value:"la calle",translation:"the street",part_of_speech:"nouns"},{value:"la tienda",translation:"the store",part_of_speech:"nouns"},{value:"la biblioteca",translation:"the library",part_of_speech:"nouns"},{value:"el libro",translation:"the book",part_of_speech:"nouns"},{value:"la playa",translation:"the beach",part_of_speech:"nouns"},{value:"la montaña",translation:"the mountain",part_of_speech:"nouns"},{value:"café",translation:"coffee",part_of_speech:"nouns"},{value:"té",translation:"tea",part_of_speech:"nouns"},{value:"vino",translation:"wine",part_of_speech:"nouns"},{value:"cerveza",translation:"beer",part_of_speech:"nouns"},{value:"leche",translation:"milk",part_of_speech:"nouns"},{value:"agua",translation:"water",part_of_speech:"nouns"},{value:"la iglesia",translation:"the church",part_of_speech:"nouns"},{value:"el museo",translation:"the museum",part_of_speech:"nouns"},{value:"la nariz",translation:"the nose",part_of_speech:"nouns"},{value:"los ojos",translation:"the eyes",part_of_speech:"nouns"},{value:"la boca",translation:"the mouth",part_of_speech:"nouns"},{value:"la cabeza",translation:"the head",part_of_speech:"nouns"},{value:"el brazo",translation:"the arm",part_of_speech:"nouns"},{value:"las piernas",translation:"the legs",part_of_speech:"nouns"},{value:"las manos",translation:"the hands",part_of_speech:"nouns"},{value:"los pies",translation:"the feet",part_of_speech:"nouns"},{value:"Buenos días.",translation:"Good morning.",part_of_speech:"phrases"},{value:"Buenas tardes.",translation:"Good afternoon.",part_of_speech:"phrases"},{value:"Buenas noches.",translation:"Goodnight.",part_of_speech:"phrases"},{value:"Hola.",translation:"Hello.",part_of_speech:"phrases"},{value:"¿Cómo estás?",translation:"How are you?",part_of_speech:"phrases"},{value:"¿Cómo está usted?",translation:"How are you?",part_of_speech:"phrases"},{value:"Bien, gracias.",translation:"Fine, thank you.",part_of_speech:"phrases"},{value:"¿Y usted?",translation:"And you?",part_of_speech:"phrases"},{value:"¿Cómo te llamas?",translation:"What’s your name?",part_of_speech:"phrases"},{value:"Me llamo…",translation:"My name is…",part_of_speech:"phrases"},{value:"Estoy buscando un restaurante.",translation:"I’m looking for a restaurant.",part_of_speech:"phrases"},{value:"Estoy buscando una parada de autobús.",translation:"I’m looking for a bus stop.",part_of_speech:"phrases"},{value:"Estoy buscando un hospital.",translation:"I’m looking for a hospital.",part_of_speech:"phrases"},{value:"Gracias.",translation:"Thank you.",part_of_speech:"phrases"},{value:"De nada.",translation:"You’re welcome.",part_of_speech:"phrases"},{value:"Perdóneme.",translation:"Excuse me.",part_of_speech:"phrases"},{value:"Lo siento.",translation:"I’m sorry.",part_of_speech:"phrases"},{value:"Hasta luego.",translation:"See you later.",part_of_speech:"phrases"},{value:"abrir",translation:"to open",part_of_speech:"verbs"},{value:"ayudar",translation:"to help",part_of_speech:"verbs"},{value:"bailar",translation:"to dance",part_of_speech:"verbs"},{value:"cambiar",translation:"to change",part_of_speech:"verbs"},{value:"caminar",translation:"to walk",part_of_speech:"verbs"},{value:"cantar",translation:"to sing",part_of_speech:"verbs"},{value:"comenzar",translation:"to begin",part_of_speech:"verbs"},{value:"contar",translation:"to count",part_of_speech:"verbs"},{value:"correr",translation:"to run",part_of_speech:"verbs"},{value:"creer",translation:"to believe",part_of_speech:"verbs"},{value:"dar",translation:"to give",part_of_speech:"verbs"},{value:"deber",translation:"to owe",part_of_speech:"verbs"},{value:"decir",translation:"to say",part_of_speech:"verbs"},{value:"entender",translation:"to understand",part_of_speech:"verbs"},{value:"estar",translation:"to be",part_of_speech:"verbs"},{value:"estudiar",translation:"to study",part_of_speech:"verbs"},{value:"gustar",translation:"to like",part_of_speech:"verbs"},{value:"haber",translation:"to have",part_of_speech:"verbs"},{value:"hablar",translation:"to speak",part_of_speech:"verbs"},{value:"ir",translation:"to go",part_of_speech:"verbs"},{value:"jugar",translation:"to play",part_of_speech:"verbs"},{value:"llamar",translation:"to call",part_of_speech:"verbs"},{value:"pagar",translation:"to pay",part_of_speech:"verbs"},{value:"partir",translation:"to leave",part_of_speech:"verbs"},{value:"pedir",translation:"to ask for",part_of_speech:"verbs"},{value:"poner",translation:"to put",part_of_speech:"verbs"},{value:"preguntar",translation:"to ask",part_of_speech:"verbs"},{value:"querer",translation:"to want",part_of_speech:"verbs"},{value:"saber",translation:"to know",part_of_speech:"verbs"},{value:"ser",translation:"to be",part_of_speech:"verbs"},{value:"tener",translation:"to have",part_of_speech:"verbs"},{value:"vivir",translation:"to live",part_of_speech:"verbs"}]}];
 
     /* src/App.svelte generated by Svelte v3.46.2 */
     const file = "src/App.svelte";
@@ -1627,15 +1627,15 @@ var app = (function () {
     			create_component(wordcard.$$.fragment);
     			attr_dev(link0, "rel", "stylesheet");
     			attr_dev(link0, "href", "https://fonts.googleapis.com/icon?family=Material+Icons");
-    			add_location(link0, file, 18, 1, 543);
+    			add_location(link0, file, 18, 1, 545);
     			attr_dev(link1, "rel", "stylesheet");
     			attr_dev(link1, "href", "https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700");
-    			add_location(link1, file, 23, 1, 655);
+    			add_location(link1, file, 23, 1, 657);
     			attr_dev(link2, "rel", "stylesheet");
     			attr_dev(link2, "href", "https://fonts.googleapis.com/css?family=Roboto+Mono");
-    			add_location(link2, file, 28, 1, 783);
+    			add_location(link2, file, 28, 1, 785);
     			attr_dev(main, "class", "pb-32 fade-in svelte-fkyd8f");
-    			add_location(main, file, 34, 0, 889);
+    			add_location(main, file, 34, 0, 891);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1702,7 +1702,7 @@ var app = (function () {
     		$$invalidate(0, word = getRandomElement(language.words));
 
     		if (language.name.toLocaleLowerCase() === "spanish") {
-    			$$invalidate(1, link = `https://www.spanishdict.com/phrases/${word.key}`);
+    			$$invalidate(1, link = `https://www.spanishdict.com/phrases/${word.value}`);
     		}
     	}
 

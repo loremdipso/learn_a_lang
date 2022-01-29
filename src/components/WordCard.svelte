@@ -22,7 +22,7 @@
 		>
 			<Icon>refresh</Icon>
 		</div>
-		<span class="text-secondary-600 font-bold">{word.key}</span>
+		<span class="text-secondary-600 font-bold">{word.value}</span>
 	</h5>
 
 	<div slot="body" class="p-5 pb-0 pt-3 text-gray-700 body-2">
@@ -31,7 +31,7 @@
 				class="p-5 opacity-0 hover:opacity-100 word"
 				class:always-show={isTouch}
 			>
-				{word.value}
+				{word.translation}
 			</div>
 		</div>
 

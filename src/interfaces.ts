@@ -5,6 +5,7 @@ export interface ILanguage {
 }
 
 export interface IWord {
-	key: string;
 	value: string;
+	translation: string;
+	part_of_speech: string;
 }

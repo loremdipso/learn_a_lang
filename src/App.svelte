@@ -13,7 +13,7 @@
 		word = getRandomElement(language.words);
 
 		if (language.name.toLocaleLowerCase() === "spanish") {
-			link = `https://www.spanishdict.com/phrases/${word.key}`;
+			link = `https://www.spanishdict.com/phrases/${word.value}`;
 		}
 	}
 

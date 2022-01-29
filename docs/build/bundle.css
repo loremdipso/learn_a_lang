@@ -86,15 +86,6 @@ svg.svelte-1rr76ng.svelte-1rr76ng {
   height: 64px;
 }
 
-.card.svelte-4ugsi9.svelte-4ugsi9 {
-  display: flex;
-  flex-direction: row;
-}
-
-.card.svelte-4ugsi9 .header.svelte-4ugsi9 {
-  text-align: center;
-}
-
 .word.svelte-1yyd3qf {
   word-wrap: break-word;
   min-height: 15rem;
@@ -112,6 +103,15 @@ svg.svelte-1rr76ng.svelte-1rr76ng {
 
 .always-show.svelte-1yyd3qf {
   opacity: 100;
+}
+
+.card.svelte-4ugsi9.svelte-4ugsi9 {
+  display: flex;
+  flex-direction: row;
+}
+
+.card.svelte-4ugsi9 .header.svelte-4ugsi9 {
+  text-align: center;
 }
 
 .reverse.svelte-1bygq4a {
