@@ -1,11 +1,23 @@
 <script lang="ts">
-	import { onMount } from "svelte";
-	onMount(() => {
-		// force-reset scroll top, since for some reason browsers remember this
-		document.body.scrollTop = 0;
-	});
-
 	import GithubCorner from "./common/GithubCorner.svelte";
+	import { getRandomElement } from "./common/utils";
+	import WordCard from "./components/WordCard.svelte";
+	import DataJSON from "./data.json";
+	import type { ILanguage, IWord } from "./interfaces";
+
+	let language = (DataJSON as any)[0] as ILanguage;
+
+	let word: IWord;
+	let link: string | null = null;
+	function setRandomWord() {
+		word = getRandomElement(language.words);
+
+		if (language.name.toLocaleLowerCase() === "spanish") {
+			link = `https://www.spanishdict.com/phrases/${word.key}`;
+		}
+	}
+
+	setRandomWord();
 </script>
 
 <svelte:head>
@@ -27,31 +39,27 @@
 </svelte:head>
 
 <main class="pb-32 fade-in">
-	<header
+	<!-- <header
 		class="relative slide-in-from-top bg-primary-300 dark:bg-black flex flex-wrap h-16 items-center justify-center left-0 p-0 shadow top-0 w-full z-20"
 	>
 		<h6 class="select-none pl-3 tracking-widest text-lg">
-			<a href="." class="text-white">Hello world!</a>
+			<a href="." class="text-white">Hola bienvenidos welcome!</a>
 		</h6>
+	</header> -->
 
-		<GithubCorner
-			href="https://github.com/loremdipso/TODO"
-			position="topRight"
-			small
-		/>
-	</header>
+	<GithubCorner
+		href="https://github.com/loremdipso/learn_a_lang"
+		position="topRight"
+		small
+	/>
 </main>
 
+<WordCard {word} {link} on:randomWord={() => setRandomWord()} />
+
 <style lang="scss">
-	:global(html) {
+	:global(html, body) {
 		height: 100vh;
 		overflow: hidden;
-	}
-
-	:global(body) {
-		height: 100%;
-		overflow-y: scroll;
-		overflow-x: auto;
 	}
 
 	:global(a) {

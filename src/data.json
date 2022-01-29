@@ -1,0 +1,15 @@
+[
+	{
+		"name": "spanish",
+		"words": [
+			{
+				"key": "hola",
+				"value": "hello"
+			},
+			{
+				"key": "b",
+				"value": "b"
+			}
+		]
+	}
+]
