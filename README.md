@@ -2,4 +2,4 @@ Simple language learning page. Given a list of words and their translations will
 
 By default this comes with some common Spanish words, but just replace `docs/spanish.json` with whatever you like. To do so, just update `data/` and run `scripts/build_data.rb`.
 
-There's also `scripts/build_bundle.rb`, which bundles the final application into a single page. Useful if you want to cache it in New Tab Override (dynamic local file access is disabled in Firefox for security).
+There's also `scripts/build_bundle.rb`, which attempts to bundle the final application into a single page. This would work, but the Default Content Security Policy disallows JS unless you explicitly enable it and then put its hash your `manifest.json` :/. So while the bundling does work I haven't found a use for it just yet.

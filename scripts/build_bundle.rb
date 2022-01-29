@@ -1,11 +1,11 @@
 #!/usr/bin/env ruby
 require 'erb'
 
-class Bundle
+class BundleData
 	def initialize()
 		@global_css = File.read("global.css")
-		@bundle_css = File.read("bundle.css")
-		@global_js = File.read("global.js")
+		@bundle_css = File.read("build/bundle.css")
+		@bundle_js = File.read("build/bundle.js")
 	end
 
 	def get_binding
@@ -15,10 +15,11 @@ end
 
 def main()
 	Dir.chdir(File.join(__dir__, "..", "docs")) do
-		rhtml = ERB.new(File.read("bundled.rhtml"))
 		data = BundleData.new
-		p rhtml.run(data.get_binding)
+		html = ERB.new(File.read("bundled.rhtml")).result(data.get_binding)
+		File.open("bundled.html", "w") {|f| f.print(html)}
 	end
+	puts "Done"
 end
 
 main()
