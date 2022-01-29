@@ -3,7 +3,7 @@ require 'json'
 
 def main()
 	languages = []
-	Dir.chdir(__dir__) do
+	Dir.chdir(File.join(__dir__, "..", "data")) do
 		dirs = Dir.glob('*').select {|f| File.directory? f}
 		dirs.each do |d|
 			languages.push({
