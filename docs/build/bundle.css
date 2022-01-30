@@ -27,11 +27,11 @@ a {
     opacity: 1;
   }
 }
-.github-corner.svelte-1rr76ng:hover .octo-arm.svelte-1rr76ng {
-  animation: svelte-1rr76ng-octocat-wave 560ms ease-in-out;
+.github-corner.svelte-1fmpe6o:hover .octo-arm.svelte-1fmpe6o {
+  animation: svelte-1fmpe6o-octocat-wave 560ms ease-in-out;
 }
 
-@keyframes svelte-1rr76ng-octocat-wave {
+@keyframes svelte-1fmpe6o-octocat-wave {
   0%, 100% {
     transform: rotate(0);
   }
@@ -43,45 +43,45 @@ a {
   }
 }
 @media (max-width: 500px) {
-  .github-corner.svelte-1rr76ng:hover .octo-arm.svelte-1rr76ng {
+  .github-corner.svelte-1fmpe6o:hover .octo-arm.svelte-1fmpe6o {
     animation: none;
   }
 
-  .github-corner.svelte-1rr76ng .octo-arm.svelte-1rr76ng {
-    animation: svelte-1rr76ng-octocat-wave 560ms ease-in-out;
+  .github-corner.svelte-1fmpe6o .octo-arm.svelte-1fmpe6o {
+    animation: svelte-1fmpe6o-octocat-wave 560ms ease-in-out;
   }
 }
-svg.svelte-1rr76ng.svelte-1rr76ng {
+svg.svelte-1fmpe6o.svelte-1fmpe6o {
   z-index: 1000;
   color: #fff;
   position: absolute;
   border: 0;
 }
 
-.topRight.svelte-1rr76ng.svelte-1rr76ng {
+.topRight.svelte-1fmpe6o.svelte-1fmpe6o {
   top: 0;
   right: 0;
 }
 
-.topLeft.svelte-1rr76ng.svelte-1rr76ng {
+.topLeft.svelte-1fmpe6o.svelte-1fmpe6o {
   top: 0;
   left: 0;
   transform: rotate(270deg);
 }
 
-.bottomRight.svelte-1rr76ng.svelte-1rr76ng {
+.bottomRight.svelte-1fmpe6o.svelte-1fmpe6o {
   bottom: 0;
   right: 0;
   transform: rotate(90deg);
 }
 
-.bottomLeft.svelte-1rr76ng.svelte-1rr76ng {
+.bottomLeft.svelte-1fmpe6o.svelte-1fmpe6o {
   bottom: 0;
   left: 0;
   transform: rotate(180deg);
 }
 
-.small.svelte-1rr76ng.svelte-1rr76ng {
+.small.svelte-1fmpe6o.svelte-1fmpe6o {
   width: 64px;
   height: 64px;
 }
@@ -103,23 +103,6 @@ svg.svelte-1rr76ng.svelte-1rr76ng {
 
 .always-show.svelte-kg0q62 {
   opacity: 100;
-}
-
-.card.svelte-4ugsi9.svelte-4ugsi9 {
-  display: flex;
-  flex-direction: row;
-}
-
-.card.svelte-4ugsi9 .header.svelte-4ugsi9 {
-  text-align: center;
-}
-
-.reverse.svelte-1bygq4a {
-  transform: rotate(180deg);
-}
-
-.tip.svelte-1bygq4a {
-  transform: rotate(90deg);
 }
 
 .overlay.svelte-k9fe7z.svelte-k9fe7z {
@@ -150,4 +133,21 @@ svg.svelte-1rr76ng.svelte-1rr76ng {
   border-radius: 3rem;
   color: white;
   padding: 1rem;
+}
+
+.card.svelte-4ugsi9.svelte-4ugsi9 {
+  display: flex;
+  flex-direction: row;
+}
+
+.card.svelte-4ugsi9 .header.svelte-4ugsi9 {
+  text-align: center;
+}
+
+.reverse.svelte-zzky5a {
+  transform: rotate(180deg);
+}
+
+.tip.svelte-zzky5a {
+  transform: rotate(90deg);
 }
