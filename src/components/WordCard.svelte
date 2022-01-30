@@ -6,12 +6,11 @@
 
 	import Card from "../common/Card.svelte";
 	import type { IWord } from "../interfaces";
-	import { isTouchDevice } from "../common/utils";
 
 	export let word: IWord;
 	export let link: string | null;
 
-	let isTouch = isTouchDevice();
+	export let shouldShow: boolean = false;
 </script>
 
 <Card>
@@ -29,7 +28,7 @@
 		<div class="bg-black my-2 text-center cursor-pointer">
 			<div
 				class="p-5 opacity-0 hover:opacity-100 word"
-				class:always-show={isTouch}
+				class:always-show={shouldShow}
 			>
 				{word.translation}
 			</div>
@@ -56,7 +55,7 @@
 
 	.refresh-button {
 		position: absolute;
-		right: 0;
+		left: 0;
 	}
 
 	.always-show {

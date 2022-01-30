@@ -21,3 +21,33 @@ export function isTouchDevice() {
 		(navigator.maxTouchPoints > 0) ||
 		((navigator as any).msMaxTouchPoints > 0));
 }
+
+// Thanks https://stackoverflow.com/a/901144
+export function queryParamValue(param: string): string | null {
+	const urlParams = new URLSearchParams(window.location.search);
+	return urlParams.get(param);
+}
+
+export function isKeyAlphaNumeric(key: string): boolean {
+	// TODO: is there something smarter we could do here?
+	return key.length === 1 && (/[a-zA-Z0-9-_]/.test(key));
+}
+
+export function isProbablyUrl(value: string): boolean {
+	if (/[ ]/.test(value)) {
+		return false;
+	}
+
+	if (/\.com$/.test(value)) {
+		return true;
+	}
+
+	return false;
+}
+
+export function redirectToUrl(url: string) {
+	if (!url.startsWith("http")) {
+		url = "https://" + url;
+	}
+	window.location.href = url;
+}

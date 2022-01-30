@@ -1,9 +1,18 @@
 <script lang="ts">
 	import GithubCorner from "./common/GithubCorner.svelte";
-	import { getRandomElement } from "./common/utils";
+	import {
+		getRandomElement,
+		isTouchDevice,
+		queryParamValue,
+	} from "./common/utils";
+	import SearchBar from "./components/SearchBar.svelte";
 	import WordCard from "./components/WordCard.svelte";
 	import DataJSON from "./data.json";
 	import type { ILanguage, IWord } from "./interfaces";
+
+	const withSearchBar = queryParamValue("withSearchBar") !== null;
+
+	let showSearchDialog: boolean = false;
 
 	let language = (DataJSON as any)[0] as ILanguage;
 
@@ -18,6 +27,9 @@
 	}
 
 	setRandomWord();
+
+	let isTouch = isTouchDevice();
+	$: shouldShow = isTouch || showSearchDialog;
 </script>
 
 <svelte:head>
@@ -39,14 +51,6 @@
 </svelte:head>
 
 <main class="pb-32 fade-in">
-	<!-- <header
-		class="relative slide-in-from-top bg-primary-300 dark:bg-black flex flex-wrap h-16 items-center justify-center left-0 p-0 shadow top-0 w-full z-20"
-	>
-		<h6 class="select-none pl-3 tracking-widest text-lg">
-			<a href="." class="text-white">Hola bienvenidos welcome!</a>
-		</h6>
-	</header> -->
-
 	<GithubCorner
 		href="https://github.com/loremdipso/learn_a_lang"
 		position="topRight"
@@ -54,7 +58,11 @@
 	/>
 </main>
 
-<WordCard {word} {link} on:randomWord={() => setRandomWord()} />
+{#if withSearchBar}
+	<SearchBar bind:showSearchDialog />
+{/if}
+
+<WordCard {word} {link} {shouldShow} on:randomWord={() => setRandomWord()} />
 
 <style lang="scss">
 	:global(html, body) {
