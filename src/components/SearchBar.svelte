@@ -10,7 +10,10 @@
 	function handleKeydown(event: KeyboardEvent) {
 		const key = event.key;
 
-		if (key === "Escape") {
+		if (event.ctrlKey || event.altKey || event.metaKey) {
+			// don't intercept key combos
+			return;
+		} else if (key === "Escape") {
 			showSearchDialog = false;
 			searchString = "";
 		} else if (key === "Enter") {
