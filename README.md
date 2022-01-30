@@ -5,3 +5,7 @@ By default this comes with some common Spanish words, but just replace `docs/spa
 There's also `scripts/build_bundle.rb`, which attempts to bundle the final application into a single page. This would work, but the Default Content Security Policy disallows JS unless you explicitly enable it and then put its hash your `manifest.json` :/. So while the bundling does work I haven't found a use for it just yet.
 
 Finally, if you append `?withSearchBar` to your url, then typing will open an input field that tries really hard to roughly correspond to your browser's omnibar. It's not ideal, but the best I can do without full browser support :\.
+
+![Basic example](/images/example.png)
+
+![With search bar](/images/withSearchBar.png)
