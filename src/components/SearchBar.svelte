@@ -41,7 +41,13 @@
 <svelte:window on:keydown={handleKeydown} />
 
 {#if showSearchDialog}
-	<div class="overlay" on:click={() => (showSearchDialog = false)} />
+	<div
+		class="overlay"
+		on:click={() => {
+			showSearchDialog = false;
+			searchString = "";
+		}}
+	/>
 	<div class="fancy-input">
 		<input bind:this={inputField} bind:value={searchString} />
 	</div>
